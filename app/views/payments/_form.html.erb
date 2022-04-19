@@ -1,10 +1,10 @@
-<%= form_with(model: payment, class: "contents") do |form| %>
-  <% if payment.errors.any? %>
+<%= form_with(model: [@group, @group.payments.create], class: "contents") do |form| %>
+  <% if @group.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
 
       <ul>
-        <% payment.errors.each do |error| %>
+        <% @group.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

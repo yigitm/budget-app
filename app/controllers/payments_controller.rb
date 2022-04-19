@@ -12,6 +12,7 @@ class PaymentsController < ApplicationController
 
   # GET /payments/new
   def new
+    @group = Group.find(params[:group_id])
     @payment = Payment.new
   end
 
@@ -21,6 +22,7 @@ class PaymentsController < ApplicationController
 
   # POST /payments or /payments.json
   def create
+    @group = Group.find(params[:group_id])
     @payment = Payment.new(payment_params)
 
     respond_to do |format|
