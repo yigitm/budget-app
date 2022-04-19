@@ -5,7 +5,6 @@ class Group < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 3 }
 
-
   def total_payment(category)
     category.payments.sum(:amount)
   end
