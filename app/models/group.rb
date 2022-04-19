@@ -4,4 +4,10 @@ class Group < ApplicationRecord
   has_many :payments, through: :group_payments, dependent: :destroy
 
   validates :name, presence: true, length: { minimum: 3 }
+
+  
+
+  def total_payment(category)
+    category.payments.sum(:amount)
+  end
 end

@@ -1,6 +1,6 @@
-<div class="flex text-lg">
+<div class="flex nav-margin">
   <% if user_signed_in? %>
-    <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: 'text-lg text-emerald-50'  %>
+    <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: 'mb-2'  %>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path, class: 'text-emerald-300'  %> |
     <%= link_to "Login", new_user_session_path, class: 'text-emerald-500'  %>

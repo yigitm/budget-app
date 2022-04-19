@@ -5,8 +5,13 @@
   </p>
 
   <p class="my-5">
+    <strong class="block font-medium mb-1">Total Payment:</strong>
+    <%= group.total_payment(group) %>
+  </p>
+
+  <p class="my-5">
     <strong class="block font-medium mb-1">Icon:</strong>
-    <%= group.icon %>
+    <%= image_tag group.icon %>
   </p>
 
   <p class="my-5">
