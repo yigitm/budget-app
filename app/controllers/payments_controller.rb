@@ -23,11 +23,11 @@ class PaymentsController < ApplicationController
   # POST /payments or /payments.json
   def create
     @group = Group.find(params[:group_id])
-    @payment = Payment.new(payment_params)
+    @payment = @group.payments.create(payment_params.except('group'))
 
     respond_to do |format|
       if @payment.save
-        format.html { redirect_to payment_url(@payment), notice: "Payment was successfully created." }
+        format.html { redirect_to group_payments_path, notice: "Payment was successfully created." }
         format.json { render :show, status: :created, location: @payment }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -67,6 +67,6 @@ class PaymentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def payment_params
-      params.require(:payment).permit(:name, :amount, :user_id)
+      params.require(:payment).permit(:name, :amount, :user_id, :group)
     end
 end
