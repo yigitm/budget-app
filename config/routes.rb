@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :groups
-  resources :payments
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-  #root to: new_user_session
+  root to: "groups#index"
+
+  resources :groups do
+    resources :payments
+  end
 end
