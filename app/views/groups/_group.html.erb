@@ -1,27 +1,28 @@
-<div id="<%= dom_id group %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
+<div class="flex justify-center mt-5" id="<%= dom_id group %>">
+  <p class="my-5 mr-5">
+    <%=link_to image_tag(group.icon), group_path(group) %>
+  </p>
+  
+  <p class="my-5 mr-5">
+    <strong class="block font-medium mb-1">Name</strong>
     <%=link_to group.name, group_path(group) %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Total Payment:</strong>
+  <p class="my-5 mr-5">
+    <strong class="block font-medium mb-1">Total Payment</strong>
     <%= group.total_payment(group) %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Icon:</strong>
-    <%= image_tag group.icon %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">User:</strong>
+  <p class="my-5 mr-5">
+    <strong class="block font-medium mb-1">User</strong>
     <%= group.user_id %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this group", group, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this group', edit_group_path(group), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+  <div class="self-center mr-5">
+    <%= link_to "Show this group", group, class: "rounded-lg py-3 ml-2 px-5 bg-lime-300 inline-block font-medium" %>
+    <%= link_to 'Edit this group', edit_group_path(group), class: "rounded-lg py-3 ml-2 px-5 bg-gray-200 inline-block font-medium" %>
+  </div>
   <% end %>
 </div>
+<hr class="mt-6 bg-gray-300 p-0.5 mx-20">
