@@ -14,9 +14,8 @@
     <%= link_to "Detail", group_payment_url(group_id: @group,id:payment), class: "rounded-lg py-3 ml-2 px-5 bg-lime-300 inline-block font-medium" %>
   </div>
   <% else %>
-  <div class="flex flex-col">
-    <%= link_to 'Edit this payment', edit_group_payment_path(@payment), class: "mt-2 text-center rounded-lg py-3 px-5 bg-gray-200 inline-block font-medium" %>
-    <%= button_to 'Destroy this payment', group_payment_path(@payment), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-rose-200 font-medium" %>
-  </div>
+    
+  <%= button_to 'Destroy this payment', group_payment_path(@payment), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-rose-200 font-medium" %>
+  
   <% end %>
 </div>

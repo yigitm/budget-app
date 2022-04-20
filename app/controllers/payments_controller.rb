@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  before_action :set_payment, only: %i[show edit update destroy ]
+  before_action :set_payment, only: %i[show]
 
   # GET /payments or /payments.json
   def index
@@ -15,10 +15,6 @@ class PaymentsController < ApplicationController
   def new
     @group = Group.find(params[:group_id])
     @payment = Payment.new
-  end
-
-  # GET /payments/1/edit
-  def edit
   end
 
   # POST /payments or /payments.json
@@ -52,10 +48,11 @@ class PaymentsController < ApplicationController
 
   # DELETE /payments/1 or /payments/1.json
   def destroy
+    @payment = Payment.find(params[:id])
     @payment.destroy
 
     respond_to do |format|
-      format.html { redirect_to group_payments_url, notice: "Payment was successfully destroyed." }
+      format.html { redirect_to root_path, notice: "Payment was successfully destroyed." }
       format.json { head :no_content }
     end
   end
