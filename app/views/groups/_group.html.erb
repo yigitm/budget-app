@@ -20,8 +20,8 @@
 
   <% if action_name != "show" %>
   <div class="self-center mr-5">
-    <%= link_to "Show this group", group, class: "rounded-lg py-3 ml-2 px-5 bg-lime-300 inline-block font-medium" %>
-    <%= link_to 'Edit this group', edit_group_path(group), class: "rounded-lg py-3 ml-2 px-5 bg-gray-200 inline-block font-medium" %>
+    <%= link_to "Detail", group, class: "rounded-lg py-3 ml-2 px-5 bg-lime-300 inline-block font-medium" %>
+    <%= link_to 'Edit', edit_group_path(group), class: "rounded-lg py-3 ml-2 px-5 bg-gray-200 inline-block font-medium" %>
   </div>
   <% end %>
 </div>
