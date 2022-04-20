@@ -4,6 +4,7 @@ class PaymentsController < ApplicationController
   # GET /payments or /payments.json
   def index
     @payments = Payment.all
+    @group = Group.find(params[:group_id])
   end
 
   # GET /payments/1 or /payments/1.json
@@ -40,7 +41,7 @@ class PaymentsController < ApplicationController
   def update
     respond_to do |format|
       if @payment.update(payment_params)
-        format.html { redirect_to payment_url(@payment), notice: "Payment was successfully updated." }
+        format.html { redirect_to group_payment_url(@payment), notice: "Payment was successfully updated." }
         format.json { render :show, status: :ok, location: @payment }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +55,7 @@ class PaymentsController < ApplicationController
     @payment.destroy
 
     respond_to do |format|
-      format.html { redirect_to payments_url, notice: "Payment was successfully destroyed." }
+      format.html { redirect_to group_payments_url, notice: "Payment was successfully destroyed." }
       format.json { head :no_content }
     end
   end

@@ -1,4 +1,4 @@
-<div id="<%= dom_id payment %>">
+<div class="flex justify-evenly mt-5 bg-white mx-4 py-3" id="<%= dom_id payment %>">
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= payment.name %>
@@ -9,13 +9,14 @@
     <%= payment.amount %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">User:</strong>
-    <%= payment.user_id %>
-  </p>
-
   <% if action_name != "show" %>
-    <%= link_to "Show this payment", group_payments_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+  <div class="self-center mr-5">
+    <%= link_to "Detail", group_payment_url(group_id: @group,id:payment), class: "rounded-lg py-3 ml-2 px-5 bg-lime-300 inline-block font-medium" %>
+  </div>
+  <% else %>
+  <div class="flex flex-col">
+    <%= link_to 'Edit this payment', edit_group_payment_path(@payment), class: "mt-2 text-center rounded-lg py-3 px-5 bg-gray-200 inline-block font-medium" %>
+    <%= button_to 'Destroy this payment', group_payment_path(@payment), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-rose-200 font-medium" %>
+  </div>
   <% end %>
 </div>

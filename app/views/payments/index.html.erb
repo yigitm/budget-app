@@ -3,12 +3,13 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Payments</h1>
-    <%= link_to 'New payment', new_group_payment_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
   <div id="payments" class="min-w-full">
     <%= render @payments %>
+  </div>
+</div>
+
+<div class="w-full bg-lime-400 p-5 mt-5 absolute bottom-0">
+  <div class="border border-solid border-7 border-white w-50 rounded-lg">
+    <%= link_to 'New payment', new_group_payment_path, class: "py-5 text-white text-center block font-medium mt-5 mb-3 w-70" %>
   </div>
 </div>
