@@ -1,8 +1,12 @@
-<div>
+
  <% list_payments(@group).each do |item| %>
    <%= item.name %>
    <%= item.amount %>
  <% end %>
-</div>
 
-<%= link_to 'Add Payment', new_group_payment_path(@group), class: "ml-2 rounded-lg py-3 px-20 bg-lime-400 inline-block font-medium text-white" %>
+
+<div class="w-full bg-lime-400 p-5 mt-5 absolute bottom-0">
+<div class="border border-solid border-7 border-white w-50 rounded-lg">
+    <%= link_to 'Add Payment', new_group_payment_path(@group), class: "py-5 text-white text-center block font-medium mt-5 mb-3 w-70" %>
+</div>
+</div>
