@@ -6,14 +6,14 @@
 
     <%= render @group %>
 
-    <%= link_to 'Edit this group', edit_group_path(@group), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this group', edit_group_path(@group), class: "mt-2 rounded-lg py-3 px-5 bg-sky-600 inline-block font-medium text-white" %>
     <div class="inline-block ml-2">
-      <%= button_to 'Destroy this group', group_path(@group), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to 'Destroy this group', group_path(@group), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-rose-200 font-medium" %>
     </div>
-    <%= link_to 'Back to groups', groups_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Back to groups', groups_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-200 inline-block font-medium" %>
   </div>
 </div>
 
-<div>
+<div class="text-center mt-5 py-5">
   <%= render 'layouts/group_payments' %>
 </div>
