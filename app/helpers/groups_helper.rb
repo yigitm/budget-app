@@ -4,7 +4,7 @@ module GroupsHelper
   end
 
   def icons
-     { 'Shopping' => 'shopping.png', 'Travel' => 'travel.png', 'Clothing' => 'clothing.png', 
+    { 'Shopping' => 'shopping.png', 'Travel' => 'travel.png', 'Clothing' => 'clothing.png',
       'Grocery' => 'grocery.png' }
   end
 end

@@ -10,26 +10,26 @@ RSpec.describe 'sign_up page', type: :system do
 
   it "can't sign up with existing user information" do
     visit('/users/sign_up')
-    fill_in "user[name]", :with => @user.name
-    fill_in "user[email]", :with => @user.email
-    fill_in "user[password]", :with => @user.password
-    fill_in "user[password_confirmation]", :with => @user.password
+    fill_in 'user[name]', with: @user.name
+    fill_in 'user[email]', with: @user.email
+    fill_in 'user[password]', with: @user.password
+    fill_in 'user[password_confirmation]', with: @user.password
 
     @user.confirmed_at = Time.now
     @user.skip_confirmation!
     @user.confirm
     @user.save
-    
+
     click_on 'sign-up'
     expect(page).to have_content('Email has already been taken')
   end
 
-  it "can sign up and redirect user to login page" do
+  it 'can sign up and redirect user to login page' do
     visit('/users/sign_up')
-    fill_in "user[name]", :with => 'Second User'
-    fill_in "user[email]", :with => 'second@mail.com'
-    fill_in "user[password]", :with => '123456'
-    fill_in "user[password_confirmation]", :with => '123456'
+    fill_in 'user[name]', with: 'Second User'
+    fill_in 'user[email]', with: 'second@mail.com'
+    fill_in 'user[password]', with: '123456'
+    fill_in 'user[password_confirmation]', with: '123456'
     click_on 'sign-up'
     expect(page).to have_content('You need to sign in or sign up before continuing.')
   end

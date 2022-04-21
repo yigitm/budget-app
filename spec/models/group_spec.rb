@@ -8,7 +8,7 @@ RSpec.describe Group, type: :model do
     @user.confirm
     @user.save
 
-    @group = Group.create(name: 'Food Category', icon:'food.png', user_id: @user.id)
+    @group = Group.create(name: 'Food Category', icon: 'food.png', user_id: @user.id)
   end
 
   it 'can be created with valid inputs' do
@@ -16,7 +16,7 @@ RSpec.describe Group, type: :model do
   end
 
   it "can't be created without name" do
-    @group2 = Group.new(icon:'food.png', user_id: @user.id)
+    @group2 = Group.new(icon: 'food.png', user_id: @user.id)
 
     expect(@group2.valid?).to be_falsey
   end
@@ -28,7 +28,7 @@ RSpec.describe Group, type: :model do
   end
 
   it "can't be created without false user_id" do
-    @group2 = Group.new(name: 'Food Category', icon:'food.png')
+    @group2 = Group.new(name: 'Food Category', icon: 'food.png')
 
     expect(@group2.valid?).to be_falsey
   end
