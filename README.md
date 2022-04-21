@@ -4,7 +4,7 @@
 
 > This a Ruby on Rails project which is about building web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-![Design]()
+![Design](/app/assets/images/app.gif)
 
 > Implementing & interacting with core features of Rails, creating authentication with Devise, model associations/validations, unit & integration tests, following a given design sample, deploying are the major concepts that I practiced in this project.
 
