@@ -1,6 +1,6 @@
 <div class="flex justify-evenly items-center mt-5 bg-white mx-4">
  <% list_payments(@group).each do |item| %>
-  <%= link_to image_tag('money.png'), group_payments_url(@group)%>
+  <%= link_to image_tag('money.png'), group_payments_url(@group), class:'border border-gray-400 rounded-sm p-3 m-5' %>
    <h5 class="font-medium mb-1"><%= link_to item.name, group_payments_url(@group) %></h5>
    <h5 class="mb-1"><%= link_to item.amount, group_payments_url(@group) %></h5>
  <% end %>

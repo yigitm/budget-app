@@ -1,15 +1,15 @@
 example_id                              | status | run_time        |
 --------------------------------------- | ------ | --------------- |
-./spec/integration/login_spec.rb[1:1]   | passed | 0.92382 seconds |
-./spec/integration/login_spec.rb[1:2]   | passed | 5.28 seconds    |
-./spec/integration/login_spec.rb[1:3]   | passed | 0.84603 seconds |
-./spec/integration/sign_up_spec.rb[1:1] | passed | 2.84 seconds    |
-./spec/integration/sign_up_spec.rb[1:2] | passed | 3.23 seconds    |
-./spec/models/group_spec.rb[1:1]        | passed | 0.01107 seconds |
-./spec/models/group_spec.rb[1:2]        | passed | 0.05828 seconds |
-./spec/models/group_spec.rb[1:3]        | passed | 0.01235 seconds |
-./spec/models/group_spec.rb[1:4]        | passed | 0.01139 seconds |
-./spec/models/payment_spec.rb[1:1]      | passed | 0.01092 seconds |
-./spec/models/payment_spec.rb[1:2]      | passed | 0.01191 seconds |
-./spec/models/payment_spec.rb[1:3]      | passed | 0.02086 seconds |
-./spec/models/payment_spec.rb[1:4]      | passed | 0.01194 seconds |
+./spec/integration/login_spec.rb[1:1]   | passed | 0.90003 seconds |
+./spec/integration/login_spec.rb[1:2]   | passed | 5.46 seconds    |
+./spec/integration/login_spec.rb[1:3]   | passed | 0.85166 seconds |
+./spec/integration/sign_up_spec.rb[1:1] | passed | 2.44 seconds    |
+./spec/integration/sign_up_spec.rb[1:2] | passed | 3.57 seconds    |
+./spec/models/group_spec.rb[1:1]        | passed | 0.01013 seconds |
+./spec/models/group_spec.rb[1:2]        | passed | 0.01344 seconds |
+./spec/models/group_spec.rb[1:3]        | passed | 0.02579 seconds |
+./spec/models/group_spec.rb[1:4]        | passed | 0.01251 seconds |
+./spec/models/payment_spec.rb[1:1]      | passed | 0.01463 seconds |
+./spec/models/payment_spec.rb[1:2]      | passed | 0.0153 seconds  |
+./spec/models/payment_spec.rb[1:3]      | passed | 0.06701 seconds |
+./spec/models/payment_spec.rb[1:4]      | passed | 0.01575 seconds |
