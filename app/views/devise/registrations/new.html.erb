@@ -28,7 +28,7 @@
 
   <div class="flex flex-col justify-center items-center">
   <div class="actions text-center">
-    <%= f.submit "Sign up", data: {turbo: false}, class: "rounded-lg py-3 px-5 bg-lime-400 text-white font-medium cursor-pointer" %>
+    <%= f.submit "Sign up", data: {turbo: false},id:'sign-up', class: "rounded-lg py-3 px-5 bg-lime-400 text-white font-medium cursor-pointer" %>
     <%= link_to "Login", new_session_path(resource_name), class: "rounded-lg py-3 px-5 bg-sky-600 text-white inline-block font-medium cursor-pointer" %><br />
     <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "text-gray-500" %><br />
   </div>
