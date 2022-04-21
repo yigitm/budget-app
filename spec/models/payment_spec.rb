@@ -27,8 +27,8 @@ RSpec.describe Payment, type: :model do
     expect(@payment2.valid?).to be_falsey
   end
 
-  it "can't be created without false user_id" do
-    @payment2 = Payment.new(name: 'Food Payment', amount: 125, user_id: 12)
+  it "can't be created without user_id" do
+    @payment2 = Payment.new(name: 'Food Payment', amount: 125 )
 
     expect(@payment2.valid?).to be_falsey
   end
