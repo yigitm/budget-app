@@ -1,0 +1,15 @@
+<nav class="flex p-8 bg-sky-600 text-white w-100 justify-between">
+    <% if current_page?('/groups/new') %>
+      <%= link_to 'Back', groups_url, class:"fa fa-arrow-left fa-3x" %>
+    <% else %>
+      <i class="fa fa-navicon fa-3x"></i>
+    <% end %>
+  <div>
+  <% if user_signed_in? %>
+    <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }%>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path  %> |
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
+  </div>
+</nav>
