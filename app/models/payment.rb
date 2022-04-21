@@ -5,4 +5,8 @@ class Payment < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 3 }
   validates :amount, numericality: { greater_than: 0, less_than: 1_000_000 }
+
+  def self.total_payment(group)
+    group.payments.sum(:amount)
+  end
 end
