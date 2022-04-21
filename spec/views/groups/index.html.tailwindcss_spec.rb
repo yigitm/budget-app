@@ -1,25 +1,23 @@
 require 'rails_helper'
 
-RSpec.describe "groups/index", type: :view do
+RSpec.describe 'home page', type: :system do
   before(:each) do
-    assign(:groups, [
-      Group.create!(
-        name: "Name",
-        icon: "Icon",
-        user: nil
-      ),
-      Group.create!(
-        name: "Name",
-        icon: "Icon",
-        user: nil
-      )
-    ])
+    @user = User.new(name: 'First Name', email: 'test@mail.com', password: '123456')
+    @user.confirmed_at = Time.now
+    @user.skip_confirmation!
+    @user.confirm
+    @user.save
+
+    @second_user = User.create!(name: 'Second User', email: 'test2@mail.com', password: '123456')
+    @second_user.confirmed_at = Time.now
   end
 
-  it "renders a list of groups" do
-    render
-    assert_select "tr>td", text: "Name".to_s, count: 2
-    assert_select "tr>td", text: "Icon".to_s, count: 2
-    assert_select "tr>td", text: nil.to_s, count: 2
+  it 'can sign in to home page with correct & confirmed credentails' do
+    visit('/users/sign_in')
+    fill_in "user[email]", :with => @user.email
+    fill_in "user[password]", :with => @user.password
+    
+    click_on 'login'
+    expect(page).to have_content('Logout')
   end
 end
