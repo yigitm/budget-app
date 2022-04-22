@@ -14,6 +14,10 @@ Original design is belongs to: [Gregoire Vella on Behance](https://www.behance.n
 
 ![Original Design](/app/assets/images/design.png)
 
+## Loom Demo
+
+[Loom Video](https://loom.com/share/69a9b66816a94b5c89ee9e7616882786)
+
 ## Live Demo
 
 [Demo Link](https://still-lake-49555.herokuapp.com/)
