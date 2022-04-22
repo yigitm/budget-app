@@ -100,9 +100,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Behance: [Gregoire Vella](https://www.behance.net/gregoirevella).
 - Microverse
 - Open source
 
-## 📝 License
+## 📝 Licenses
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) and [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/) licensed.
