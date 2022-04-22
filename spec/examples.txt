@@ -1,0 +1,15 @@
+example_id                              | status | run_time        |
+--------------------------------------- | ------ | --------------- |
+./spec/integration/login_spec.rb[1:1]   | passed | 0.85317 seconds |
+./spec/integration/login_spec.rb[1:2]   | passed | 0.81778 seconds |
+./spec/integration/login_spec.rb[1:3]   | passed | 0.84497 seconds |
+./spec/integration/sign_up_spec.rb[1:1] | passed | 2.4 seconds     |
+./spec/integration/sign_up_spec.rb[1:2] | passed | 8.52 seconds    |
+./spec/models/group_spec.rb[1:1]        | passed | 0.0096 seconds  |
+./spec/models/group_spec.rb[1:2]        | passed | 0.01145 seconds |
+./spec/models/group_spec.rb[1:3]        | passed | 0.01159 seconds |
+./spec/models/group_spec.rb[1:4]        | passed | 0.01728 seconds |
+./spec/models/payment_spec.rb[1:1]      | passed | 0.01307 seconds |
+./spec/models/payment_spec.rb[1:2]      | passed | 0.01635 seconds |
+./spec/models/payment_spec.rb[1:3]      | passed | 0.01504 seconds |
+./spec/models/payment_spec.rb[1:4]      | passed | 0.07104 seconds |

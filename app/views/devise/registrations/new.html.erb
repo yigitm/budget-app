@@ -1,0 +1,37 @@
+<%= render 'layouts/navbar'%>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field text-center flex flex-col justify-center mt-5 mb-2 items-center">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, placeholder: "name", class:"rounded-lg" %>
+  </div><br />
+
+  <div class="field text-center flex flex-col justify-center items-center">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class:"rounded-lg" %>
+  </div><br />
+
+  <div class="field text-center flex flex-col justify-center items-center">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password", class:"rounded-lg" %>
+  </div><br />
+
+  <div class="field text-center flex flex-col justify-center items-center">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"rounded-lg" %>
+  </div><br />
+
+  <div class="flex flex-col justify-center items-center">
+  <div class="actions text-center">
+    <%= f.submit "Sign up", data: {turbo: false},id:'sign-up', class: "rounded-lg py-3 px-5 bg-lime-400 text-white font-medium cursor-pointer" %>
+    <%= link_to "Login", new_session_path(resource_name), class: "rounded-lg py-3 px-5 bg-sky-600 text-white inline-block font-medium cursor-pointer" %><br />
+    <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "text-gray-500" %><br />
+  </div>
+  </div>
+<% end %>
+

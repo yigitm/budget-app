@@ -1,0 +1,16 @@
+<nav class="flex p-8 bg-sky-600 text-white w-100 justify-between">
+    <% if current_page?(new_group_payment_path) %>
+      <%= link_to '<', group_payments_url, class:"text-5xl" %>
+    <% else %>
+      <i class="fa fa-navicon fa-3x"></i>
+    <% end %>
+    <p class="text-6xl">Budget App</p>
+  <div>
+  <% if user_signed_in? %>
+    <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }%>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path  %> |
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
+  </div>
+</nav>

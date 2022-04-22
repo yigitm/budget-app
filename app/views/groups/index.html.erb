@@ -1,0 +1,20 @@
+<%= render 'layouts/navbar'%>
+
+<div class="w-full">
+  <% unless @groups.empty? %>
+    <div id="groups" class="min-w-full">
+      <h1 class="font-bold text-4xl text-center">Category</h1>
+    <%= render @groups %>
+    </div>
+  <% else%>
+    <div id="payments" class="min-w-ful">
+      <h1 class="text-7xl text-center my-20">No Category yet</h1>
+    </div>
+  <% end %>
+</div>
+
+<div class="w-full bg-lime-400 p-5 mt-5 absolute bottom-0">
+<div class="border border-solid border-7 border-white w-50 rounded-lg">
+    <%= link_to 'Add New Category', new_group_path, class: "py-5 text-white text-center block font-medium mt-5 mb-3 w-70" %>
+</div>
+</div>

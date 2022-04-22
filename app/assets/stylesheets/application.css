@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@font-face {
+  font-family: 'helvetica_sans_bold';
+  src: url('/assets/fonts/helvetica_sans_bold.ttf');
+}
+
+* {
+  font-family: 'helvetica_sans_bold';
+}
+/* stylelint-enable font-family-no-missing-generic-family-keyword */

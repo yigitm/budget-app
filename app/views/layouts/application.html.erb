@@ -9,11 +9,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="bg-gray-200">
+    <main>
       <%= yield %>
+      <p class="notice text-center text-1xl"><%= notice %></p>
+      <p class="alert text-center text-1xl"><%= alert %></p>
+      <script src="https://cdn.tailwindcss.com"></script>
     </main>
   </body>
 </html>
